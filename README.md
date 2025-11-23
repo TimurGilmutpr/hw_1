@@ -7,6 +7,7 @@
 
 1. **Клонирование и настройка:**
    ```bash
-   git clone <your-repo-url>
-   cd mlops_hw1_ivanov_ivan
+   git clone [<your-repo-url>](https://github.com/TimurGilmutpr/hw_1.git)
+   cd hw_1
+
    pip install -r requirements.txt
