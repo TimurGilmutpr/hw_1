@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/Laptop_Timurki/Desktop/MLOPS/hw_1/mlruns/1/models/m-fb23b277514249f79dc5ef0ad018c346/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.6.0
+model_id: m-fb23b277514249f79dc5ef0ad018c346
+model_size_bytes: 1012
+model_uuid: m-fb23b277514249f79dc5ef0ad018c346
+prompts: null
+run_id: cb252f42dc2c46d089fc1da639c7b2d6
+utc_time_created: '2025-11-23 22:46:41.073962'

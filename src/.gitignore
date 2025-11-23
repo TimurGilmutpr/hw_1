@@ -1,0 +1,19 @@
+# Data
+data/processed/
+model.pkl
+
+# DVC
+.dvc/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/

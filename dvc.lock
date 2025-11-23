@@ -1,0 +1,56 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: data/raw/data.csv
+      hash: md5
+      md5: a3afd479d87ce6c1f49228d8ea2851c0
+      size: 4336
+    - path: src/prepare.py
+      hash: md5
+      md5: 2683af8d0b4a132d01f8ac6b7ade1aa1
+      size: 1155
+    params:
+      params.yaml:
+        prepare.random_state: 42
+        prepare.test_size: 0.2
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 5eebbf79f10fb7944b9e417bc9fbb70c
+      size: 936
+    - path: data/processed/train.csv
+      hash: md5
+      md5: e18c0c76c1d0ae6582397201e4a358b1
+      size: 3486
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 5eebbf79f10fb7944b9e417bc9fbb70c
+      size: 936
+    - path: data/processed/train.csv
+      hash: md5
+      md5: e18c0c76c1d0ae6582397201e4a358b1
+      size: 3486
+    - path: src/train.py
+      hash: md5
+      md5: 7b3c13580fd48183c1444606c0bf3149
+      size: 2184
+    params:
+      params.yaml:
+        train.max_iter: 1000
+        train.model: LogisticRegression
+        train.random_state: 42
+    outs:
+    - path: mlruns
+      hash: md5
+      md5: fec2532fb1b6da20ac7e41b644e60f3b.dir
+      size: 3369
+      nfiles: 7
+    - path: model.pkl
+      hash: md5
+      md5: ec8a685d75fe178d3c2a38dc92fab092
+      size: 1012
