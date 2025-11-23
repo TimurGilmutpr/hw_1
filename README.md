@@ -7,7 +7,7 @@
 
 1. **Клонирование и настройка:**
    ```bash
-   git clone [<your-repo-url>](https://github.com/TimurGilmutpr/hw_1.git)
+   git clone https://github.com/TimurGilmutpr/hw_1.git
    cd hw_1
 
    pip install -r requirements.txt
